@@ -1,5 +1,8 @@
 package homework.h02;
 
-// base
-// https://leetcode.com/problems/add-binary/
-public class T1 {}
+// https://leetcode.com/problems/add-digits/
+public class T1 {
+    public int addDigits(int num) {
+        return num == 0 ? 0 : 1 + (num - 1) % 9;
+    }
+}
