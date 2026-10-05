@@ -1,4 +1,4 @@
-package homework.h02;
+package homework.h01;
 
 // https://leetcode.com/problems/add-digits/
 public class T1 {
