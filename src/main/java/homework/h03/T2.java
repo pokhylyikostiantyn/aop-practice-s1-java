@@ -1,15 +1,17 @@
-class Solution {
-    public double average(int[] salary) {
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
-        int sum = 0;
+package homework.h03;
 
-        for (int s : salary) {
-            sum += s;
-            min = Math.min(min, s);
-            max = Math.max(max, s);
-        }
+public class T2 {
+    public int differenceOfSums(int n, int m) {
+        int total = n * (n + 1) / 2;
+        int k = n / m;
+        int div = m * k * (k + 1) / 2;
+        return total - 2 * div;
+    }
 
-        return (double) (sum - min - max) / (salary.length - 2);
+    public static void main(String[] args) {
+        T2 t = new T2();
+        System.out.println(t.differenceOfSums(10, 3)); // 19
+        System.out.println(t.differenceOfSums(5, 6));  // 15
+        System.out.println(t.differenceOfSums(5, 1));  // -15
     }
 }
