@@ -1,8 +1,7 @@
 package homework.h04;
 
 // base
-// https://leetcode.com/problems/plus-one/
-public class T1 {}
+// https://leetcode.com/problems/hamming-distance/
 class Solution {
     public int hammingDistance(int x, int y) {
         int diff = x ^ y;
