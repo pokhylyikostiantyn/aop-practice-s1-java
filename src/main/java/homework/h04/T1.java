@@ -1,15 +1,10 @@
-package homework.h04;
+package homework.h05;
 
 // base
-// https://leetcode.com/problems/hamming-distance/
+// https://leetcode.com/problems/number-complement/
 class Solution {
-    public int hammingDistance(int x, int y) {
-        int diff = x ^ y;
-        int count = 0;
-        while (diff != 0) {
-            diff &= (diff - 1); // clears the lowest set bit
-            count++;
-        }
-        return count;
+    public int findComplement(int num) {
+        int mask = Integer.highestOneBit(num) - 1; // единицы на всех позициях ниже старшего бита
+        return ~num & mask;
     }
 }
