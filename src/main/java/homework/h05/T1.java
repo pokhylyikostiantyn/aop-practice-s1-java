@@ -1,9 +1,9 @@
 package homework.h05;
 
-public class Solution {
+public class T1 {
     public int maxProductDifference(int[] nums) {
-        int max1 = 0, max2 = 0;                                  // max1 >= max2
-        int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;  // min1 <= min2
+        int max1 = 0, max2 = 0;
+        int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;
 
         for (int n : nums) {
             if (n > max1) {
@@ -25,6 +25,8 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
-        System.out.println(s.maxProductDifference(new int[]{5, 6, 2, 7, 4}));       // 34
-        System.out.println(s.maxProductDifference(new int[]{4, 2, 5, 9, 7, 4, 8})); // 64
+        T1 s = new T1();
+        System.out.println(s.maxProductDifference(new int[]{5, 6, 2, 7, 4}));
+        System.out.println(s.maxProductDifference(new int[]{4, 2, 5, 9, 7, 4, 8}));
+    }
+}
