@@ -1,10 +1,9 @@
 
 package homework.h02;
 
-// https://leetcode.com/problems/add-digits/
-public class T2 {
-    public int addDigits(int num) {
-        // Цифровой корень: сумма цифр не меняет остаток от деления на 9.
-        // Для num > 0 результат лежит в диапазоне 1..9.
-        return num == 0 ? 0 : 1 + (num - 1) % 9;
+// https://leetcode.com/problems/a-number-after-a-double-reversal/
+public class T3 {
+    public boolean isSameAfterReversals(int num) {
+        return num == 0 || num % 10 != 0;
     }
+}
