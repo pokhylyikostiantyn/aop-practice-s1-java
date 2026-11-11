@@ -1,0 +1,45 @@
+package homework.h11;
+
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+class T2Test {
+    private final T2 solution = new T2();
+
+    @Test
+    void example1() {
+        assertThat(solution.majorityElement(new int[]{3, 2, 3})).isEqualTo(3);
+    }
+
+    @Test
+    void example2() {
+        assertThat(solution.majorityElement(new int[]{2, 2, 1, 1, 1, 2, 2})).isEqualTo(2);
+    }
+
+    @Test
+    void singleElement() {
+        assertThat(solution.majorityElement(new int[]{7})).isEqualTo(7);
+    }
+
+    @Test
+    void allSameElements() {
+        assertThat(solution.majorityElement(new int[]{5, 5, 5, 5})).isEqualTo(5);
+    }
+
+    @Test
+    void majorityAtTheEnd() {
+        assertThat(solution.majorityElement(new int[]{1, 2, 2})).isEqualTo(2);
+    }
+
+    @Test
+    void negativeNumbers() {
+        assertThat(solution.majorityElement(new int[]{-1, -1, 2})).isEqualTo(-1);
+    }
+
+    @Test
+    void boundaryValues() {
+        assertThat(solution.majorityElement(new int[]{-1_000_000_000, 1_000_000_000, -1_000_000_000}))
+                .isEqualTo(-1_000_000_000);
+    }
+}
